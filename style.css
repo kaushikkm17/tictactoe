@@ -1,0 +1,17 @@
+#gameboard-container {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px 20px;
+    justify-content: center;
+}
+
+.gameboard-square {
+    background-color: red;
+    padding: 5px;
+    margin: 5px;
+}
+
+.gameboard-square:hover {
+    cursor: pointer;
+    background-color: black;
+}
