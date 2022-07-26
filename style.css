@@ -1,9 +1,19 @@
 body {
-    background-color: darkblue;
+    background-color: black;
 }
 
-h4 {
+#declare-winner {
     color: white;
+    display: inline;
+}
+
+#play-again-button {
+    height: 25px;
+    width: 100px;
+    background-color: bisque;
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: 700;
 }
 
 #gameboard-container {
@@ -11,6 +21,7 @@ h4 {
     grid-template-columns: 120px 120px 120px;
     grid-template-rows: 120px 120px 120px 20px;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .gameboard-square {
@@ -26,4 +37,15 @@ h4 {
 .gameboard-square:hover {
     cursor: pointer;
     background-color: gray;
+}
+
+#after-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-header {
+    color: white;
+    text-align: center;
 }

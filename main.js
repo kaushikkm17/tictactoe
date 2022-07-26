@@ -12,12 +12,21 @@ const updateBoard = () => {
 const endGame = (winner) => {
     const displayWinner = document.createElement('h4');
     displayWinner.innerHTML = winner + ' is the winner'
+    displayWinner.id = 'declare-winner'
+
     const playAgainButton = document.createElement('button')
     playAgainButton.innerHTML = 'Play Again'
     playAgainButton.id = 'play-again-button'
 
-    document.body.appendChild(displayWinner);
-    document.body.appendChild(playAgainButton);
+    document.querySelector('#after-game').appendChild(displayWinner);
+    document.querySelector('#after-game').appendChild(playAgainButton);
+
+    document.querySelector('#play-again-button').addEventListener('click', () => {
+        board = ['','','','','','','','',''];
+        updateBoard()
+        document.querySelector('#declare-winner').remove()
+        document.querySelector('#play-again-button').remove()
+    })
 }
 
 //check for 3 in a row
@@ -60,3 +69,4 @@ for (let i = 0; i < boardSquares.length; i++) {
         
     })
 }
+
